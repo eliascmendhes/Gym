@@ -1,0 +1,54 @@
+<div class="item">
+    <div>Avatar Url</div>
+    <div><input type="url" name="avatar_url" placeholder="http://" value="{{member.avatar_url}}"></div>
+</div>
+
+<div class="item">
+    <div>Novo</div>
+    <div><input type="text" name="name" placeholder="nome" value="{{member.name}}"></div>
+</div>
+
+<div class="item">
+    <div>Email</div>
+    <div><input type="email" name="email" placeholder="email" value="{{member.email}}"></div>
+</div>
+<div class="item">
+    <div>Data de nascimento</div>
+    <div><input type="date" name="birth" value="{{member.birth}}"></div>
+</div>
+
+<div class="item">
+    <div>Sexo</div>
+    <div>
+        <span><input type="radio" name="gender" value="M" {% if member.gender == "M" %} checked="checked" {% endif %}>Masculino</span>
+        <span><input type="radio" name="gender" value="F" {% if member.gender == "F" %} checked="checked" {% endif %}>Feminino</span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Tipo sanguíneo</div>
+    <div>
+        <select name="blood">
+        <option value="A" {%if member.blood == "A"%} selected{%endif%}>A+</option>
+        <option value="AB" {%if member.blood == "AB"%} selected{%endif%}>A-</option>
+        <option value="B" {%if member.blood  == "B"%} selected{%endif%}>B+</option>
+        <option value="B-" {%if member.blood == "B-"%} selected{%endif%}>B-</option>
+        <option value="AB+" {%if member.blood == "AB+"%} selected{%endif%}>AB+</option>
+        <option value="AB-" {%if member.blood == "AB-"%} selected{%endif%}>AB-</option>
+        <option value="O1" {%if member.blood == "O1"%} selected{%endif%}>O1+</option>
+        <option value="OB-" {%if member.blood == "OB-"%} selected{%endif%}>O-</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Peso em {kg}</div>
+    <div><input type="number" name="weight" value="{{member.weight}}"></div>
+</div>
+
+<div class="item">
+    <div>Altura em {cm}</div>
+    <div><input type="number" name="height" value="{{member.height}}"></div>
+</div>
+
+<button type="submit">Salvar</button>
